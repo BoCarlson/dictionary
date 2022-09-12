@@ -16,6 +16,7 @@ h1 {
     font-size: 50px;
     font-weight: 500;
     line-height: 58px;
+    margin: 39px 0 52px;
     text-align: center;
     width: 100%;
 }
@@ -27,6 +28,11 @@ h2 {
     line-height: 14px;
     margin: 0 0 15px;
     text-transform: uppercase;
+}
+
+h3{
+    font-size: 24px;
+    line-height: 28px;
 }
 
 a {
@@ -59,10 +65,30 @@ header a, header a:hover {
     color: #FFF;
 }
 
+form#search_terms {
+    margin-bottom: 31px;
+}
+
+form#search_terms input[type='text'], form#search_terms input[type='text']::placeholder {
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+form#search_terms input[type='text'] {
+    background-color: #FFF;
+    border: 0;
+    border-radius: 16px;
+    color: #000;
+    line-height: 60px;
+    padding: 0 23px;
+    width: 100%;
+}
+
 main {
     background-color: #FFF;
     border-radius: 16px;
-    padding: 20px 24px 104px;
+    padding: 19px 24px 104px;
 }
 
 hr {

@@ -4,21 +4,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
     <header>
         <h1><a href="/">Acme Company</a></h1>
     </header>
     <form id="search_terms" method="POST" action="/">
-        <label for="term">Search</label>
+        <!--<label for="term">Search</label>-->
         <input type="text" id="term" name="term" placeholder="Look up a term"/>
-        <button type="submit">Submit</button>
+        <!--<button type="submit">Submit</button>-->
     </form>
     <main>
         <?php if ($term) : ?>
             <h2>Term</h2>
-            <p><?= $term ?></p>
+            <h3><?= $term ?></h3>
             <?php if($termDefinitions && $termDefinitions->num_rows) : ?>
                 <ul>
                     <?php foreach ($termDefinitions as $row) : ?>
@@ -35,7 +35,7 @@
                 <button type='submit'>Submit</button>
             </form>
         <?php else : ?>
-            <p>Please search for a term</p>
+            <h3>Please search for a term</h3>
         <?php endif; ?>
         <hr/>
         <?= $Display->listWithHeader(
