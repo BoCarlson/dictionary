@@ -1,5 +1,4 @@
-body * {
-    display: block;
+* {
     box-sizing: border-box;
 }
 
@@ -124,7 +123,7 @@ hr {
 }
 
 ul.results {
-    margin: 0 0 41px;
+    margin: 0 0 26px;
 }
 
 footer {
