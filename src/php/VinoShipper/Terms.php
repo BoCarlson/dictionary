@@ -23,7 +23,7 @@ class Terms
      *
      * @param int $limit Limit the amount of records returned, default 10
      *
-     * @return mysqli_result|bool Returns mysqli_result if terms are found, false otherwise
+     * @return \mysqli_result Rows of results from query
      */
     public function listUndefined(int $limit = 10)
     {
@@ -44,7 +44,7 @@ class Terms
      *
      * @param string $term Term to save or update
      *
-     * @return bool True on successful save or update, false otherwise
+     * @return bool True on insert or update, false otherwise
      */
     public function saveOrUpdate($term) {
         $term = $this->mysqli->real_escape_string($term);

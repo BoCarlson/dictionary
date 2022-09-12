@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require './vendor/autoload.php';
 
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
@@ -8,8 +8,8 @@ use VinoShipper\Display;
 use VinoShipper\Terms;
 
 $mysqli              = new mysqli("db", "root", "", "dictionary");
-
-$Definitions         = new Definitions($mysqli);
+$Logger              = new Logger('dictionary-app');
+$Definitions         = new Definitions($mysqli, $Logger);
 $Display             = new Display();
 $Terms               = new Terms($mysqli);
 
@@ -18,8 +18,10 @@ $termDefinitions     = false;
 $termSavedOrUpdated  = false;
 $termDefinitionSaved = false;
 
+$Logger->pushHandler(new StreamHandler(__DIR__ . '/logs/error.log', Logger::ERROR));
+
 if($term) {
-    $Terms->saveOrUpdate($term);
+    $termSavedOrUpdated = $Terms->saveOrUpdate($term);
 
     if(!empty($_POST['definition']) && $termSavedOrUpdated) {
         $termDefinitionSaved = $Definitions->save($term, $_POST['definition']);

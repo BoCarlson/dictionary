@@ -3,3 +3,4 @@
 *.Iml
 
 src/vendor
+src/logs/*.log

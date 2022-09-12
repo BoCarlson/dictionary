@@ -7,7 +7,7 @@ namespace VinoShipper;
 class Definitions
 {
     private $mysqli = null;
-    private $logger = null;
+    private $Logger = null;
 
     /**
      * Set up internal mysqli and logger
@@ -15,10 +15,10 @@ class Definitions
      * @param \mysqli $mysqli
      * @param \Monolog\Logger $logger
      */
-    public function __construct(\mysqli $mysqli, \Monolog\Logger $logger = null)
+    public function __construct(\mysqli $mysqli, \Monolog\Logger $Logger = null)
     {
         $this->mysqli = $mysqli;
-        $this->logger = $logger;
+        $this->Logger = $Logger;
     }
 
     /**
@@ -31,8 +31,6 @@ class Definitions
         return $this->mysqli->query(
             "SELECT `term`.*
             FROM `term`
-            JOIN `definition`
-            ON `term`.`id` = `definition`.`term_id`
             ORDER BY `last_search_tstamp` DESC
             LIMIT $limit"
         );
@@ -64,7 +62,7 @@ class Definitions
      * @param string $term       Term for the definition
      * @param string $definition Definition that will be saved to the term
      *
-     * @return
+     * @return bool True on success, false otherwise
      */
     public function save(string $term, string $definition)
     {
@@ -73,10 +71,10 @@ class Definitions
         $success    = false;
 
         $termId = $this->mysqli->query(
-            "SELECT *
-            FROM term
-            where term='$term'"
-        )->fetch_row()[0];
+            "SELECT `id`
+            FROM `term`
+            where `term` ='$term'"
+        )->fetch_object()->id;
 
         if($termId) {
             $success = $this->mysqli->query(
@@ -85,8 +83,10 @@ class Definitions
             );
 
             if(!$success) {
-
+                $this->Logger->error(Date('Y-m-d H:i:s').": '$term - $definition' was not saved");
             }
+        } else {
+            $this->Logger->error(Date('Y-m-d H:i:s').": Term ID for '$term' not found during definition save");
         }
 
         return $success;
