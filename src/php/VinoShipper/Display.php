@@ -18,15 +18,17 @@ class Display
     function listWithHeader(
         string $headerText,
         \mysqli_result $listData,
-        string $column = 'term',
-        string $emptyText = "None"
+        string $column     = 'term',
+        string $emptyText  = "None",
+        string $classes    = 'results',
+        string $headerType = 'h2'
     )
     {
         ob_start();
 
         ?>
-        <h4><?= $headerText ?></h4>
-        <ul>
+        <<?= $headerType ?>><?= $headerText ?></<?= $headerType ?>>
+        <ul class="<?= $classes ?>">
             <?php if($listData->num_rows) : ?>
                 <?php foreach ($listData as $row) : ?>
                     <li><a href="?term=<?= $row[$column] ?>"><?= $row[$column] ?></a></li>
