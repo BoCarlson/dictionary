@@ -11,8 +11,7 @@
         <h1><a href="/">Acme Company</a></h1>
     </header>
     <form id="search_terms" method="POST" action="/">
-        <!--<label for="term">Search</label>-->
-        <input type="text" id="term" name="term" placeholder="Look up a term"/>
+        <input type="text" id="term" name="term" aria-label="Search" placeholder="Look up a term"/>
         <!--<button type="submit">Submit</button>-->
     </form>
     <main>
