@@ -20,7 +20,7 @@
             <h2>Term</h2>
             <h3><?= $term ?></h3>
             <?php if($termDefinitions && $termDefinitions->num_rows) : ?>
-                <ul>
+                <ul class="definitions">
                     <?php foreach ($termDefinitions as $row) : ?>
                         <li><?= $row['text'] ?></li>
                     <?php endforeach; ?>

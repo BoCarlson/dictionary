@@ -1,10 +1,12 @@
-* {
+body * {
+    display: block;
     box-sizing: border-box;
 }
 
 body {
     /* align-items: center; */
     background-color: #BDBDBD;
+    display: block;
     /* display: flex; */
     /* flex-direction: column; */
     font-family: Roboto, sans-serif;
@@ -13,6 +15,11 @@ body {
     line-height: 20px;
     margin: 0;
     padding: 0 60px;
+}
+
+h1, h2, h3 {
+    display: inline-block;
+    width: 100%;
 }
 
 h1 {
@@ -34,8 +41,10 @@ h2 {
 }
 
 h3{
+    display: inline-block;
     font-size: 24px;
     line-height: 28px;
+    margin: 1px 0 8px;
 }
 
 a {
@@ -48,12 +57,24 @@ a:hover {
 }
 
 ul {
+    display: inline-block;
+    width: 100%;
     list-style: none;
     padding: 0;
 }
 
 li {
     margin-bottom: 15px;
+}
+
+ul.definitions {
+    margin: 0 0 17px;
+    list-style: disc;
+    padding-left: 22px;
+}
+
+ul.definitions li {
+    display: list-item;
 }
 
 form textarea, form label, form input {
