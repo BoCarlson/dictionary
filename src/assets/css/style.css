@@ -3,11 +3,11 @@
 }
 
 body {
-    /* align-items: center; */
+    align-items: center;
     background-color: #BDBDBD;
     display: block;
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     font-family: Roboto, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -52,7 +52,8 @@ a {
     transition: color 100ms ease-in-out;
 }
 
-a:hover {
+a:hover, a:focus {
+    outline: none;
     color: #32d8d8;
 }
 
@@ -68,7 +69,7 @@ li {
 }
 
 ul.definitions {
-    margin: 0 0 17px;
+    margin: 0 0 15px;
     list-style: disc;
     padding-left: 22px;
 }
@@ -86,8 +87,18 @@ header, form#search_terms, main, footer{
     max-width: 430px;
 }
 
-header a, header a:hover {
+header a, header a:hover, header a:focus {
     color: #FFF;
+}
+
+header a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 100ms linear;
+}
+
+header a:focus {
+    text-decoration-color: #FFF;
 }
 
 form#search_terms {
@@ -107,13 +118,55 @@ form#search_terms input[type='text'] {
     color: #000;
     line-height: 56px;
     padding: 0 23px;
+    transition: border 150ms ease-in-out;
     width: 100%;
-    transition: border 250ms ease-in-out;
 }
 
 form#search_terms input[type='text']:focus {
     outline: none;
     border: 2px solid #32d8d8;
+}
+
+form#add_definition label {
+    color: #9E9E9E;
+    font-size: 12px;
+    font-weight: 14px;
+    margin-bottom: 3px;
+}
+
+form#add_definition textarea {
+    border: 2px solid #2AC0C0;
+    border-radius: 4px;
+    height: 106px;
+    margin-bottom: 9px;
+    padding: 8px 9px;
+    transition: border 150ms ease-in-out;
+    width: 100%;
+}
+
+form#add_definition textarea:focus {
+    outline: none;
+    border: 2px solid #32d8d8;
+}
+
+form#add_definition button {
+    background-color: #2AC0C0;
+    border: 2px solid #2AC0C0;
+    border-radius: 4px;
+    color: #FFF;
+    margin: 0;
+    padding: 3px 15px;
+    transition: all 150ms ease-in-out;
+}
+
+form#add_definition button:hover, form#add_definition button:focus {
+    outline: none;
+    background-color: #32d8d8;
+    border-color: #32d8d8;
+}
+
+form#add_definition button:hover {
+    cursor: pointer;
 }
 
 main {
@@ -122,11 +175,15 @@ main {
     padding: 19px 24px 104px;
 }
 
+main p {
+    margin: 0 0 30px;
+}
+
 hr {
     border: none;
     border-top: 1px solid #979797;
     height: 1px;
-    margin: 0 0 40px;
+    margin: 38px 0 40px;
 }
 
 ul.results {
@@ -148,7 +205,8 @@ footer a {
     transition: text-decoration-color 100ms linear;
 }
 
-footer a:hover {
+footer a:hover, footer a:focus {
+    outline: none;
     color: #FFF;
     text-decoration-color: #FFF;
 }
