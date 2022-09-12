@@ -47,6 +47,6 @@
             $Terms->listUndefined()
         ) ?>
     </main>
-    <footer><a href="/">2021 Acme</a> | <a href="/terms.php">Terms and Conditions</a></footer>
+    <footer><a href="/">2021 Acme</a> | <a href="/terms-and-conditions">Terms and Conditions</a></footer>
 </body>
 </html>

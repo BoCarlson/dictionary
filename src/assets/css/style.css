@@ -3,7 +3,10 @@
 }
 
 body {
+    /* align-items: center; */
     background-color: #BDBDBD;
+    /* display: flex; */
+    /* flex-direction: column; */
     font-family: Roboto, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -58,6 +61,7 @@ form textarea, form label, form input {
 }
 
 header, form#search_terms, main, footer{
+    width: 100%;
     max-width: 430px;
 }
 
