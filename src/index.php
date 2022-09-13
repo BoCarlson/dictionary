@@ -1,9 +1,9 @@
 <?php
 require './vendor/autoload.php';
 
-use App\VinoShipper\Definitions;
-use App\VinoShipper\Display;
-use App\VinoShipper\Terms;
+use App\Dictionary\Definitions;
+use App\Dictionary\Display;
+use App\Dictionary\Terms;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 

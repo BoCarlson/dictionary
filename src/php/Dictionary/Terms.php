@@ -2,10 +2,15 @@
 /**
  * Handles all terms related database interaction
  */
-namespace App\VinoShipper;
+namespace App\Dictionary;
 
 class Terms
 {
+    /**
+     * Internal mysqli
+     *
+     * @var \mysqli
+     */
     private $mysqli = null;
 
     /**
@@ -39,14 +44,13 @@ class Terms
     }
 
     /**
-     * Save or update a term. If a term already exists search count will be incremented and
-     * timestamp will be updated
+     * Save or update a term. If a term already exists search count will be incremented and timestamp will be updated
      *
      * @param string $term Term to save or update
      *
      * @return bool True on insert or update, false otherwise
      */
-    public function saveOrUpdate($term) {
+    public function saveOrUpdate(string $term) {
         $term = $this->mysqli->real_escape_string($term);
 
         return $this->mysqli->query(

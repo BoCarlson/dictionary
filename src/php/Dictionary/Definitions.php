@@ -2,11 +2,22 @@
 /**
  * Handles all definitions related database interaction
  */
-namespace App\VinoShipper;
+namespace App\Dictionary;
 
 class Definitions
 {
+    /**
+     * Internal mysqli
+     *
+     * @var \mysqli
+     */
     private $mysqli = null;
+
+    /**
+     * Monolog logger
+     *
+     * @var \Monolog\Logger
+     */
     private $Logger = null;
 
     /**
@@ -23,6 +34,8 @@ class Definitions
 
     /**
      * List definitions that have been recently added to the database
+     *
+     * @param int $limit Limit the amount of records returned, default 10
      *
      * @return \mysqli_result Rows of results from query
      */
