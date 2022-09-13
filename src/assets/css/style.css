@@ -53,7 +53,7 @@
     box-sizing: border-box;
 }
 
-/* General Element Style */
+/* Element Styles */
 
 body {
     align-items: center;
@@ -252,9 +252,30 @@ form#search_terms input[type='text']:focus {
 form#search_terms button {
     background-color: transparent;
     border: 0;
+    height: 36px;
     position: absolute;
-    top: 18px;
+    top: 12px;
     right: 24px;
+    width: 36px;
+}
+
+form#search_terms button img {
+    position: relative;
+}
+
+form#search_terms button div {
+    background-color: transparent;
+    border-radius: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color var(--input-transition-time) var(--input-transition-type);
+    width: 100%;
+}
+
+form#search_terms button:hover div, form#search_terms button:focus div{
+    background-color: var(--interaction-highlight-color);
 }
 
 form#search_terms button:hover {
@@ -324,6 +345,8 @@ form#add_definition button:hover {
 }
 
 @media (max-width: 620px) {
+    /* Element Styles */
+
     body {
         padding: 0 var(--body-padding-mobile);
     }
@@ -333,11 +356,15 @@ form#add_definition button:hover {
         line-height: 48px;
     }
 
+    /* Header Styles */
+
     header img{
         height: 28px;
         margin-right: 10px;
         width: auto;
     }
+
+    /* Main Styles */
 
     main #stats{
         flex-direction: column;
@@ -349,10 +376,14 @@ form#add_definition button:hover {
 }
 
 @media (max-width: 320px) {
+    /* Element Styles */
+
     h1 {
         font-size: 28px;
         line-height: 36px;
     }
+
+    /* Header Styles */
 
     header img{
         height: 20px;

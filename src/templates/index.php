@@ -14,7 +14,10 @@
     </header>
     <form id="search_terms" method="POST" action="/">
         <input type="text" id="term" name="term" aria-label="Search" placeholder="Look up a term" required/>
-        <button type="submit"><img src="/assets/images/magnifying-glass.svg" alt="Search Submit Button"></button>
+        <button type="submit">
+            <div></div>
+            <img src="/assets/images/magnifying-glass.svg" alt="Search Submit Button">
+        </button>
     </form>
     <main>
         <?php if ($term) : ?>
