@@ -1,12 +1,12 @@
 :root {
     /* General */
-    --font-family: Roboto, sans-serif;
-    --app-max-width: 728px;
-    --body-padding: 20px;
-    --body-padding-mobile: 8px;
+    --font-family:             Roboto, sans-serif;
+    --app-max-width:           728px;
+    --body-padding:            20px;
+    --body-padding-mobile:     8px;
     --container-border-radius: 16px;
-    --input-border-thickness: 2px;
-    --input-border-radius: 4px;
+    --input-border-thickness:  2px;
+    --input-border-radius:     4px;
 
     /* Colors */
     --black:      #212121;
@@ -37,11 +37,14 @@
     --footer-interaction-color:           var(--white);
     --footer-interaction-highlight-color: var(--white);
 
-    /* Fonts */
+    /* Elements */
 
-    /* Element Sizing */
 
     /* Transition Timings */
+    --anchor-transition-time: 100ms;
+    --anchon-transition-type: ease-in-out;
+    --input-transition-time: 150ms;
+    --input-transition-type: ease-in-out;
 }
 
 /* Global Styles */
@@ -101,7 +104,7 @@ h3{
 a {
     color: var(--interaction-color);
     text-decoration: none;
-    transition: color 100ms ease-in-out;
+    transition: color var(--anchor-transition-time) var(--anchon-transition-type);
 }
 
 a:hover, a:focus {
@@ -157,7 +160,7 @@ header a, header a:hover, header a:focus {
 header a {
     text-decoration: underline;
     text-decoration-color: transparent;
-    transition: text-decoration-color 100ms linear;
+    transition: text-decoration-color var(--anchor-transition-time) var(--anchon-transition-type);
 }
 
 header a:hover, header a:focus {
@@ -190,7 +193,7 @@ footer a {
     color: var(--footer-interaction-color);
     text-decoration: underline;
     text-decoration-color: transparent;
-    transition: text-decoration-color 100ms linear;
+    transition: text-decoration-color var(--anchor-transition-time) var(--anchon-transition-type);
 }
 
 footer a:hover, footer a:focus {
@@ -222,7 +225,7 @@ form#search_terms input[type='text'] {
     color: var(--input-text-color);
     line-height: 56px;
     padding: 0 23px;
-    transition: border 150ms ease-in-out;
+    transition: border var(--input-transition-time) var(--input-transition-type);
     width: 100%;
 }
 
@@ -244,7 +247,7 @@ form#add_definition textarea {
     height: 106px;
     margin-bottom: 9px;
     padding: 8px 9px;
-    transition: border 150ms ease-in-out;
+    transition: border var(--input-transition-time) var(--input-transition-type);
     width: 100%;
 }
 
@@ -260,7 +263,7 @@ form#add_definition button {
     color: var(--button-text-color);
     margin: 0;
     padding: 3px 15px;
-    transition: all 150ms ease-in-out;
+    transition: all var(--input-transition-time) var(--input-transition-type);
 }
 
 form#add_definition button:hover, form#add_definition button:focus {
