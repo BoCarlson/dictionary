@@ -1,44 +1,30 @@
-# Vinoshipper Interview Project
-This repository has a simple dictionary application that allows you to search for terms, add definitions and see recent searches and newly added definitions.
+# About Dictionary!
 
-The code is poorly structured and the application does not match the design.  The project goal is to improve the code structure, and update the layout to match the UX Designs in Figma. You are welcome to improve upon the design if you like.
+Dictionary! allows you to look up terms and find definitions. Definitions can be added to the term if it is found. A
+term can have multiple definitions so feel free to add as many as you like.
 
-You are free to use any frameworks or tools you choose, and feel free to reach out if you need help integrating them into the docker configuration.
+## Running Dictionary!
 
-## UX Design Document
-https://www.figma.com/file/Qvw2UjG68WEXPlSovCayn6/Dev-Test?node-id=0%3A1
-
-## Running the project
+NOTE: All commands below assume that you are currently in application root before starting
 
 ### Requirements
+
 You will need docker desktop installed to run the application
 
-### Starting the application
+### Installation
 
-This assumes that you are currently in project root before starting
+Installation is easy! Just follow the steps below to get up and running.
 
 ```bash
  cd src
  ../bin/composer install
- docker compose up
+ docker compose up -d
 ```
 
-Once the application has started, it should be accessible via http://localhost:8080.  If you run into any issues getting to this point, please contact us as it is probably an issue on our side and we'll be happy to help out.
+Once the application has started, it should be accessible via http://localhost:8080
 
-### Adding Dependencies with Composer
-If you want to add additional composer dependencies, the easiest way is with the bundled composer docker image. Make your updates to composer.json and then run composer from the bin dir.
-
-This assumes that you are currently in project root before starting
-
-```bash
-cd src
-../bin/composer install
-```
-
-### Starting Over
-If you need to wipe out the DB and clean everything up you can re-set everything with the following commands.
-
-This assumes that you are currently in project root before starting
+### Resetting the application
+If you need to reset the application (clear Composer files and DB) use the following commands.
 
 ```bash
 docker compose down
