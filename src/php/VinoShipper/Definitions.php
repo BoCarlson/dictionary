@@ -2,7 +2,7 @@
 /**
  * Handles all definitions related database interaction
  */
-namespace VinoShipper;
+namespace App\VinoShipper;
 
 class Definitions
 {

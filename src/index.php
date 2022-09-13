@@ -1,11 +1,11 @@
 <?php
 require './vendor/autoload.php';
 
+use App\VinoShipper\Definitions;
+use App\VinoShipper\Display;
+use App\VinoShipper\Terms;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
-use VinoShipper\Definitions;
-use VinoShipper\Display;
-use VinoShipper\Terms;
 
 $mysqli              = new mysqli("db", "root", "", "dictionary");
 $Logger              = new Logger('dictionary-app');

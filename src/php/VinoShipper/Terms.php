@@ -2,7 +2,7 @@
 /**
  * Handles all terms related database interaction
  */
-namespace VinoShipper;
+namespace App\VinoShipper;
 
 class Terms
 {

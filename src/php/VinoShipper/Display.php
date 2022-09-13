@@ -2,7 +2,7 @@
 /**
  * Helper class with common display code methods
  */
-namespace VinoShipper;
+namespace App\VinoShipper;
 
 class Display
 {
