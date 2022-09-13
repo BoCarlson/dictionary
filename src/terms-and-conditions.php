@@ -1,2 +1,2 @@
 <?php
-// Nothing here yet
+require_once('templates/terms-and-conditions.php');
