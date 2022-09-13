@@ -2,6 +2,7 @@
 <head>
     <title>Acme Company - Dictionary!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/images/logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
@@ -12,8 +13,8 @@
         <h1><a href="/"><img src="/assets/images/logo.svg" alt="Acme Company Logo">Acme Company</a></h1>
     </header>
     <form id="search_terms" method="POST" action="/">
-        <input type="text" id="term" name="term" aria-label="Search" placeholder="Look up a term"/>
-        <!--<button type="submit">Submit</button>-->
+        <input type="text" id="term" name="term" aria-label="Search" placeholder="Look up a term" required/>
+        <button type="submit"><img src="/assets/images/magnifying-glass.svg" alt="Search Submit Button"></button>
     </form>
     <main>
         <?php if ($term) : ?>
@@ -28,11 +29,11 @@
             <?php else : ?>
                 <p>No definitions found, add one?</p>
             <?php endif; ?>
-            <form id="add_definition" method='POST' action='/'>
-                <label for='definition'>Definition</label>
-                <input type='hidden' name='term' value='<?= $term ?>'>
-                <textarea id='definition' name='definition' placeholder="Enter a new definition"></textarea>
-                <button type='submit'>Submit</button>
+            <form id="add_definition" method="POST" action="/">
+                <label for="definition">Definition</label>
+                <input type="hidden" name="term" value="<?= $term ?>" required>
+                <textarea id="definition" name="definition" placeholder="Enter a new definition" required></textarea>
+                <button type="submit">Submit</button>
             </form>
         <?php else : ?>
             <h3>Please search for a term</h3>

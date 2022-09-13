@@ -223,6 +223,7 @@ form textarea, form label, form input {
 }
 
 form#search_terms {
+    position: relative;
     margin-bottom: 31px;
 }
 
@@ -246,6 +247,22 @@ form#search_terms input[type='text'] {
 form#search_terms input[type='text']:focus {
     outline: none;
     border: var(--input-border-thickness) solid var(--interaction-highlight-color);
+}
+
+form#search_terms button {
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    top: 18px;
+    right: 24px;
+}
+
+form#search_terms button:hover {
+    cursor: pointer;
+}
+
+form#search_terms button:focus {
+    outline: none;
 }
 
 form#add_definition {
@@ -317,7 +334,7 @@ form#add_definition button:hover {
     }
 
     header img{
-        height: 30px;
+        height: 28px;
         margin-right: 10px;
         width: auto;
     }
@@ -338,7 +355,7 @@ form#add_definition button:hover {
     }
 
     header img{
-        height: 22px;
+        height: 20px;
         margin-right: 8px;
         width: auto;
     }
