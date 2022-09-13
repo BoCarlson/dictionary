@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="magnifying-glass.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1424"
+     inkscape:window-height="480"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-x="244"
+     inkscape:window-y="264"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg4" />
+  <circle
+     style="fill:#56dfdf"
+     cx="8.9491539"
+     cy="9.0508471"
+     r="7.3333302"
+     id="circle2" />
+  <path
+     fill-rule="evenodd"
+     clip-rule="evenodd"
+     d="M16.0686 15.0943H17.1527L24 21.9554L21.9554 24L15.0943 17.1527V16.0686L14.7238 15.6844C13.1595 17.0292 11.1286 17.8388 8.91938 17.8388C3.99314 17.8388 0 13.8456 0 8.91938C0 3.99314 3.99314 0 8.91938 0C13.8456 0 17.8388 3.99314 17.8388 8.91938C17.8388 11.1286 17.0292 13.1595 15.6844 14.7238L16.0686 15.0943ZM2.74447 8.91938C2.74447 12.3362 5.50261 15.0943 8.91942 15.0943C12.3362 15.0943 15.0944 12.3362 15.0944 8.91938C15.0944 5.50257 12.3362 2.74443 8.91942 2.74443C5.50261 2.74443 2.74447 5.50257 2.74447 8.91938Z"
+     fill="#757575"
+     id="path2" />
+</svg>

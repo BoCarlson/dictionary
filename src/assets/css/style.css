@@ -2,11 +2,7 @@
     /* General */
     --font-family:             Roboto, sans-serif;
     --app-max-width:           728px;
-    --body-padding:            20px;
-    --body-padding-mobile:     8px;
     --container-border-radius: 16px;
-    --input-border-thickness:  2px;
-    --input-border-radius:     4px;
 
     /* Colors */
     --black:      #212121;
@@ -38,13 +34,16 @@
     --footer-interaction-highlight-color: var(--white);
 
     /* Elements */
-
+    --body-padding:           20px;
+    --body-padding-mobile:    8px;
+    --input-border-thickness: 2px;
+    --input-border-radius:    4px;
 
     /* Transition Timings */
     --anchor-transition-time: 100ms;
     --anchon-transition-type: ease-in-out;
-    --input-transition-time: 150ms;
-    --input-transition-type: ease-in-out;
+    --input-transition-time:  150ms;
+    --input-transition-type:  ease-in-out;
 }
 
 /* Global Styles */
@@ -130,22 +129,6 @@ hr {
     margin: 38px 0 40px;
 }
 
-/* Class Specific Styles */
-
-ul.definitions {
-    margin: 0 0 15px;
-    list-style: disc;
-    padding-left: 22px;
-}
-
-ul.definitions li {
-    display: list-item;
-}
-
-ul.results {
-    margin: 0 0 26px;
-}
-
 /* Header Styles */
 
 header, form#search_terms, main, footer{
@@ -177,6 +160,20 @@ main {
 
 main p {
     margin: 0 0 30px;
+}
+
+main ul.definitions {
+    margin: 0 0 15px;
+    list-style: disc;
+    padding-left: 22px;
+}
+
+main ul.definitions li {
+    display: list-item;
+}
+
+main ul.results {
+    margin: 0 0 26px;
 }
 
 /* Footer Styles*/
