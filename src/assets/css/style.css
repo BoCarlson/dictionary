@@ -1,10 +1,14 @@
 :root {
-    /* General */
+    /**
+     * General
+     */
     --font-family:             Roboto, sans-serif;
     --app-max-width:           768px;
     --container-border-radius: 16px;
 
-    /* Colors */
+    /**
+     * Colors
+     */
     --black:      #212121;
     --white:      #FFF;
     --light-grey: #BDBDBD;
@@ -13,39 +17,57 @@
     --light-teal: #32d8d8;
     --teal:       #2AC0C0;
 
-    /* Element specific colors */
+    /**
+     * Colors - Element Specific
+     */
     --bg-color:                           var(--light-grey);
 
-    --text-color:                         var(--black);
+    --button-text-color:                  var(--white);
+
+    --footer-text-color:                  var(--white);
+    --footer-interaction-color:           var(--white);
+    --footer-interaction-highlight-color: var(--white);
+
+    --h2-color:                           var(--grey);
+
+    --h3-color:                           var(--black);
+
+    --hr-color:                           var(--dark-grey);
+
+    --input-placeholder-color:            var(--grey);
+    --input-text-color:                   var(--black);
 
     --interaction-color:                  var(--teal);
     --interaction-highlight-color:        var(--light-teal);
+
+    --label-color:                        var(--grey);
 
     --logo-text-color:                    var(--white);
     --logo-text-color-active:             var(--white);
 
     --main-elemnt-color:                  var(--white);
 
-    --h2-color:                           var(--grey);
-
-    --h3-color:                           var(--black);
-
     --search-border-color:                var(--white);
 
-    --label-color:                        var(--grey);
+    --text-color:                         var(--black);
 
-    --button-text-color:                  var(--white);
+    /**
+     * Elements
+     */
+    --body-padding:              24px;
 
-    --input-placeholder-color:            var(--grey);
-    --input-text-color:                   var(--black);
+    --header-image-size:         auto;
+    --header-image-margin-right: 12px;
 
-    --hr-color:                           var(--dark-grey);
+    --input-border-thickness:    2px;
+    --input-border-radius:       4px;
 
-    --footer-text-color:                  var(--white);
-    --footer-interaction-color:           var(--white);
-    --footer-interaction-highlight-color: var(--white);
+    --stats-flex-direction:      row;
+    --stats-aside-width:         50%;
 
-    /* Fonts */
+    /**
+     * Fonts
+     */
     --add_definition-label-font-size:            12px;
     --add_definition-label-font-weight:          14px;
     --add_definition-ta-font-size:               16px;
@@ -80,19 +102,9 @@
     --search-terms-input-font-size:              16px;
     --search-terms-input-font-weight:            400;
 
-    /* Elements */
-    --body-padding:              24px;
-
-    --header-image-size:         auto;
-    --header-image-margin-right: 12px;
-
-    --input-border-thickness:    2px;
-    --input-border-radius:       4px;
-
-    --stats-flex-direction:      row;
-    --stats-aside-width:         50%;
-
-    /* Transition Timings */
+    /**
+     * Transitions
+     */
     --anchor-transition-time: 100ms;
     --anchor-transition-type: ease-in-out;
 
@@ -102,36 +114,52 @@
 
 @media (max-width: 620px) {
     :root {
+        /**
+         * Elements
+         */
         --body-padding:              12px;
-
-        --h1-font-size:              40px;
-        --h1-line-height:            48px;
 
         --header-image-size:         28px;
         --header-image-margin-right: 10px;
 
         --stats-flex-direction:      column;
         --stats-aside-width:         100%;
+
+        /**
+         * Fonts
+         */
+        --h1-font-size:   40px;
+        --h1-line-height: 48px;
     }
 }
 
 @media (max-width: 320px) {
     :root {
-        --h1-font-size:              28px;
-        --h1-line-height:            36px;
-
+        /**
+         * Elements
+         */
         --header-image-size:         20px;
         --header-image-margin-right: 8px;
+
+        /**
+         * Fonts
+         */
+        --h1-font-size:              28px;
+        --h1-line-height:            36px;
     }
 }
 
-/* Global Styles */
+/**
+ * Global Styles
+ */
 
 * {
     box-sizing: border-box;
 }
 
-/* Element Styles */
+/**
+ * Element Styles
+ */
 
 body {
     align-items: center;
@@ -209,19 +237,21 @@ hr {
     margin: 38px 0 40px;
 }
 
-/* Header Styles */
+/**
+ * Header Styles
+ */
 
 header, form#search_terms, main, footer{
     width: 100%;
     max-width: var(--app-max-width);
 }
 
-header a, header a:hover, header a:focus {
-    color: var(--logo-text-color);
-}
-
 header h1 {
     text-align: var(--header-text-align);
+}
+
+header a, header a:hover, header a:focus {
+    color: var(--logo-text-color);
 }
 
 header a {
@@ -240,7 +270,9 @@ header img{
     width: auto;
 }
 
-/* Main Styles */
+/**
+ * Main Styles
+ */
 
 main {
     background-color: var(--main-elemnt-color);
@@ -252,31 +284,33 @@ main p {
     margin: 0 0 30px;
 }
 
-main ul.definitions {
+ul.definitions {
     margin: 0 0 15px;
     list-style: disc;
     padding-left: 22px;
 }
 
-main ul.definitions li {
+ul.definitions li {
     display: list-item;
 }
 
-main #stats{
+#stats{
     display: flex;
     flex-direction: var(--stats-flex-direction);
     justify-content: space-evenly;
 }
 
-main #stats aside {
+#stats aside {
     width: var(--stats-aside-width);
 }
 
-main ul.results {
+ul.results {
     margin: 0 0 26px;
 }
 
-/* Footer Styles*/
+/**
+ * Footer Styles
+ */
 
 footer {
     color: var(--footer-text-color);
@@ -299,11 +333,15 @@ footer a:hover, footer a:focus {
     text-decoration-color: var(--footer-interaction-highlight-color);
 }
 
-/* Form Styles */
+/**
+ * Form Styles
+ */
 
 form textarea, form label, form input {
     display: block;
 }
+
+/* Search */
 
 form#search_terms {
     position: relative;
@@ -342,6 +380,14 @@ form#search_terms button {
     width: 36px;
 }
 
+form#search_terms button:hover {
+    cursor: pointer;
+}
+
+form#search_terms button:focus {
+    outline: none;
+}
+
 form#search_terms button img {
     position: relative;
 }
@@ -361,13 +407,7 @@ form#search_terms button:hover div, form#search_terms button:focus div{
     background-color: var(--interaction-highlight-color);
 }
 
-form#search_terms button:hover {
-    cursor: pointer;
-}
-
-form#search_terms button:focus {
-    outline: none;
-}
+/* Add Definition */
 
 form#add_definition {
     align-items: flex-end;
@@ -383,6 +423,12 @@ form#add_definition label {
     width: 100%;
 }
 
+form#add_definition textarea::placeholder {
+    color: var(--input-placeholder-color);
+    font-size: var(--add_definition-ta-placeholder-font-size);
+    font-weight: var(--add_definition-ta-placeholder-font-weight);
+}
+
 form#add_definition textarea {
     border: var(--input-border-thickness) solid var(--interaction-color);
     border-radius: var(--input-border-radius);
@@ -394,12 +440,6 @@ form#add_definition textarea {
     padding: 8px 9px;
     transition: border var(--input-transition-time) var(--input-transition-type);
     width: 100%;
-}
-
-form#add_definition textarea::placeholder {
-    color: var(--input-placeholder-color);
-    font-size: var(--add_definition-ta-placeholder-font-size);
-    font-weight: var(--add_definition-ta-placeholder-font-weight);
 }
 
 form#add_definition textarea:focus {
@@ -417,12 +457,12 @@ form#add_definition button {
     transition: all var(--input-transition-time) var(--input-transition-type);
 }
 
+form#add_definition button:hover {
+    cursor: pointer;
+}
+
 form#add_definition button:hover, form#add_definition button:focus {
     outline: none;
     background-color: var(--interaction-highlight-color);
     border-color: var(--interaction-highlight-color);
-}
-
-form#add_definition button:hover {
-    cursor: pointer;
 }
