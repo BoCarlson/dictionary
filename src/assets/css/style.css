@@ -1,10 +1,41 @@
+:root {
+    /* Colors */
+    --black:      #212121;
+    --white:      #FFF;
+    --light-teal: #32d8d8;
+    --teal:       #2AC0C0;
+    --light-grey: #BDBDBD;
+    --grey:       #9E9E9E;
+    --dark-grey:  #979797;
+
+    /* Element specific colors */
+    --bg-color:                           var(--light-grey);
+    --text-color:                         var(--black);
+    --interaction-color:                  var(--teal);
+    --interaction-highlight-color:        var(--light-teal);
+    --logo-text-color:                    var(--white);
+    --logo-text-color-active:             var(--white);
+    --main-elemnt-color:                  var(--white);
+    --h2-color:                           var(--grey);
+    --search-border-color:                var(--white);
+    --label-color:                        var(--grey);
+    --button-text-color:                  var(--white);
+    --input-placeholder-color:            var(--grey);
+    --input-text-color:                   var(--black);
+    --hr-color:                           var(--dark-grey);
+    --footer-text-color:                  var(--white);
+    --footer-interaction-color:           var(--white);
+    --footer-interaction-highlight-color: var(--white);
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     align-items: center;
-    background-color: #BDBDBD;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: block;
     display: flex;
     flex-direction: column;
@@ -31,7 +62,7 @@ h1 {
 }
 
 h2 {
-    color: rgba(0, 0, 0, 0.38);
+    color: var(--h2-color);
     font-size: 12px;
     font-weight: 700;
     line-height: 14px;
@@ -47,14 +78,14 @@ h3{
 }
 
 a {
-    color: #2AC0C0;
+    color: var(--interaction-color);
     text-decoration: none;
     transition: color 100ms ease-in-out;
 }
 
 a:hover, a:focus {
     outline: none;
-    color: #32d8d8;
+    color: var(--interaction-highlight-color);
 }
 
 ul {
@@ -88,7 +119,7 @@ header, form#search_terms, main, footer{
 }
 
 header a, header a:hover, header a:focus {
-    color: #FFF;
+    color: var(--logo-text-color);
 }
 
 header a {
@@ -97,25 +128,25 @@ header a {
     transition: text-decoration-color 100ms linear;
 }
 
-header a:focus {
-    text-decoration-color: #FFF;
+header a:hover, header a:focus {
+    text-decoration-color: var(--logo-text-color-active);
 }
 
 form#search_terms {
     margin-bottom: 31px;
 }
 
-form#search_terms input[type='text'], form#search_terms input[type='text']::placeholder {
-    color: rgba(0, 0, 0, 0.38);
+form#search_terms input[type='text']::placeholder {
+    color: var(--placeholder-color);
     font-size: 16px;
     font-weight: 400;
 }
 
 form#search_terms input[type='text'] {
-    background-color: #FFF;
-    border: 2px solid #fff;
+    background-color: var(--main-elemnt-color);
+    border: 2px solid var(--search-border-color);
     border-radius: 16px;
-    color: #000;
+    color: var(--input-text-color);
     line-height: 56px;
     padding: 0 23px;
     transition: border 150ms ease-in-out;
@@ -124,18 +155,18 @@ form#search_terms input[type='text'] {
 
 form#search_terms input[type='text']:focus {
     outline: none;
-    border: 2px solid #32d8d8;
+    border: 2px solid var(--interaction-highlight-color);
 }
 
 form#add_definition label {
-    color: #9E9E9E;
+    color: var(--label-color);
     font-size: 12px;
     font-weight: 14px;
     margin-bottom: 3px;
 }
 
 form#add_definition textarea {
-    border: 2px solid #2AC0C0;
+    border: 2px solid var(--interaction-color);
     border-radius: 4px;
     height: 106px;
     margin-bottom: 9px;
@@ -146,14 +177,14 @@ form#add_definition textarea {
 
 form#add_definition textarea:focus {
     outline: none;
-    border: 2px solid #32d8d8;
+    border: 2px solid var(--interaction-highlight-color);
 }
 
 form#add_definition button {
-    background-color: #2AC0C0;
-    border: 2px solid #2AC0C0;
+    background-color: var(--interaction-color);
+    border: 2px solid var(--interaction-color);
     border-radius: 4px;
-    color: #FFF;
+    color: var(--button-text-color);
     margin: 0;
     padding: 3px 15px;
     transition: all 150ms ease-in-out;
@@ -161,8 +192,8 @@ form#add_definition button {
 
 form#add_definition button:hover, form#add_definition button:focus {
     outline: none;
-    background-color: #32d8d8;
-    border-color: #32d8d8;
+    background-color: var(--interaction-highlight-color);
+    border-color: var(--interaction-highlight-color);
 }
 
 form#add_definition button:hover {
@@ -170,7 +201,7 @@ form#add_definition button:hover {
 }
 
 main {
-    background-color: #FFF;
+    background-color: var(--main-elemnt-color);
     border-radius: 16px;
     padding: 19px 24px 104px;
 }
@@ -181,7 +212,7 @@ main p {
 
 hr {
     border: none;
-    border-top: 1px solid #979797;
+    border-top: 1px solid var(--hr-color);
     height: 1px;
     margin: 38px 0 40px;
 }
@@ -191,7 +222,7 @@ ul.results {
 }
 
 footer {
-    color: #FFF;
+    color: var(--footer-text-color);
     font-size: 12px;
     line-height: 14px;
     padding: 40px 0 34px;
@@ -199,7 +230,7 @@ footer {
 }
 
 footer a {
-    color: #FFF;
+    color: var(--footer-interaction-color);
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: text-decoration-color 100ms linear;
@@ -207,6 +238,6 @@ footer a {
 
 footer a:hover, footer a:focus {
     outline: none;
-    color: #FFF;
-    text-decoration-color: #FFF;
+    color: var(--footer-interaction-highlight-color);
+    text-decoration-color: var(--footer-interaction-highlight-color);
 }
