@@ -2,6 +2,7 @@
     /**
      * General
      */
+
     --font-family:             Roboto, sans-serif;
     --app-max-width:           768px;
     --container-border-radius: 16px;
@@ -9,6 +10,7 @@
     /**
      * Colors
      */
+
     --black:      #212121;
     --white:      #FFF;
     --light-grey: #BDBDBD;
@@ -20,6 +22,7 @@
     /**
      * Colors - Element Specific
      */
+
     --bg-color:                           var(--light-grey);
 
     --button-text-color:                  var(--white);
@@ -54,20 +57,60 @@
     /**
      * Elements
      */
-    --body-padding:              24px;
 
-    --header-image-size:         auto;
-    --header-image-margin-right: 12px;
+    --add_definition-button-padding:      3px 15px;
+    --add_definition-label-margin-bottom: 3px;
+    --add_definition-ta-height:           106px;
+    --add_definition-ta-margin-bottom:    9px;
+    --add_definition-ta-padding:          8px 9px;
 
-    --input-border-thickness:    2px;
-    --input-border-radius:       4px;
+    --body-side-padding:                  24px;
 
-    --stats-flex-direction:      row;
-    --stats-aside-width:         50%;
+    --definitions-list-style:           disc;
+    --definitions-margin-bottom:        15px;
+    --definitions-padding-left:         22px;
+
+    --footer-padding:                   40px 0 34px;
+    --footer-text-align:                center;
+
+    --h1-margin:                        39px 0 52px;
+
+    --h2-margin:                        0 0 15px;
+
+    --h3-margin:                        1px 0 8px;
+
+    --hr-height:                        1px;
+    --hr-margin:                        38px 0 40px;
+
+    --header-image-size:                auto;
+    --header-image-margin-right:        12px;
+
+    --input-border-thickness:           2px;
+    --input-border-radius:              4px;
+
+    --li-margin-bottom:                 15px;
+
+    --main-padding:                     19px 24px 20px;
+    --main-p-padding-bottom:            30px;
+
+    --results-margin-bottom:            15px;
+
+    --search_terms-button-height:       36px;
+    --search_terms-button-top:          12px;
+    --search_terms-button-right:        24px;
+    --search_terms-button-width:        36px;
+
+    --search_terms-input-line-height:   56px;
+    --search_terms-input-padding-sides: 23px;
+    --search_terms-margin-bottom:       31px;
+
+    --stats-flex-direction:             row;
+    --stats-aside-width:                50%;
 
     /**
      * Fonts
      */
+
     --add_definition-label-font-size:            12px;
     --add_definition-label-font-weight:          14px;
     --add_definition-ta-font-size:               16px;
@@ -105,6 +148,7 @@
     /**
      * Transitions
      */
+
     --anchor-transition-time: 100ms;
     --anchor-transition-type: ease-in-out;
 
@@ -117,7 +161,8 @@
         /**
          * Elements
          */
-        --body-padding:              12px;
+
+        --body-side-padding:         12px;
 
         --header-image-size:         28px;
         --header-image-margin-right: 10px;
@@ -128,24 +173,30 @@
         /**
          * Fonts
          */
+
         --h1-font-size:   40px;
         --h1-line-height: 48px;
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
     :root {
         /**
          * Elements
          */
+
+        --body-side-padding:         8px;
+
         --header-image-size:         20px;
         --header-image-margin-right: 8px;
 
         /**
          * Fonts
          */
+
         --h1-font-size:              28px;
         --h1-line-height:            36px;
+        --h1-margin:                 29px 0 42px;
     }
 }
 
@@ -172,7 +223,7 @@ body {
     font-weight: var(--body-font-weight);
     line-height: var(--body-line-height);
     margin: 0;
-    padding: 0 var(--body-padding);
+    padding: 0 var(--body-side-padding);
 }
 
 h1, h2, h3 {
@@ -184,7 +235,7 @@ h1 {
     font-size: var(--h1-font-size);
     font-weight: var(--h1-font-weight);
     line-height: var(--h1-line-height);
-    margin: 39px 0 52px;
+    margin: var(--h1-margin);
     width: 100%;
     text-transform: var(--h1-text-transform);
 }
@@ -194,7 +245,7 @@ h2 {
     font-size: var(--h2-font-size);
     font-weight: var(--h2-font-weight);
     line-height: var(--h2-line-height);
-    margin: 0 0 15px;
+    margin: var(--h2-margin);
     text-transform: var(--h2-text-transform);
 }
 
@@ -204,7 +255,7 @@ h3{
     font-size: var(--h3-font-size);
     font-weight: var(--h3-font-weight);
     line-height: var(--h3-line-height);
-    margin: 1px 0 8px;
+    margin: var(--h3-margin);
     text-transform: var(--h3-text-transform);
 }
 
@@ -227,24 +278,28 @@ ul {
 }
 
 li {
-    margin-bottom: 15px;
+    margin-bottom: var(--li-margin-bottom);
 }
 
 hr {
     border: none;
-    border-top: 1px solid var(--hr-color);
-    height: 1px;
-    margin: 38px 0 40px;
+    border-top: var(--hr-height) solid var(--hr-color);
+    height: var(--hr-height);
+    margin: var(--hr-margin);
 }
 
 /**
- * Header Styles
+ * Primary Element Styles
  */
 
 header, form#search_terms, main, footer{
     width: 100%;
     max-width: var(--app-max-width);
 }
+
+/**
+ * Header Styles
+ */
 
 header h1 {
     text-align: var(--header-text-align);
@@ -277,17 +332,17 @@ header img{
 main {
     background-color: var(--main-elemnt-color);
     border-radius: var(--container-border-radius);
-    padding: 19px 24px 20px;
+    padding: var(--main-padding);
 }
 
 main p {
-    margin: 0 0 30px;
+    margin: 0 0 var(--main-p-padding-bottom);
 }
 
 ul.definitions {
-    margin: 0 0 15px;
-    list-style: disc;
-    padding-left: 22px;
+    margin: 0 0 var(--definitions-margin-bottom);
+    list-style: var(--definitions-list-style);
+    padding-left: var(--definitions-padding-left);
 }
 
 ul.definitions li {
@@ -305,7 +360,7 @@ ul.definitions li {
 }
 
 ul.results {
-    margin: 0 0 26px;
+    margin: 0 0 var(--results-margin-bottom);
 }
 
 /**
@@ -316,8 +371,8 @@ footer {
     color: var(--footer-text-color);
     font-size: var(--footer-font-size);
     line-height: var(--footer-line-height);
-    padding: 40px 0 34px;
-    text-align: center;
+    padding: var(--footer-padding);
+    text-align: var(--footer-text-align);
 }
 
 footer a {
@@ -345,7 +400,7 @@ form textarea, form label, form input {
 
 form#search_terms {
     position: relative;
-    margin-bottom: 31px;
+    margin-bottom: var(--search_terms-margin-bottom);
 }
 
 form#search_terms input[type='text']::placeholder {
@@ -359,8 +414,8 @@ form#search_terms input[type='text'] {
     border: var(--input-border-thickness) solid var(--search-border-color);
     border-radius: var(--container-border-radius);
     color: var(--input-text-color);
-    line-height: 56px;
-    padding: 0 23px;
+    line-height: var(--search_terms-input-line-height);
+    padding: 0 var(--search_terms-input-padding-sides);
     transition: border var(--input-transition-time) var(--input-transition-type);
     width: 100%;
 }
@@ -373,11 +428,11 @@ form#search_terms input[type='text']:focus {
 form#search_terms button {
     background-color: transparent;
     border: 0;
-    height: 36px;
+    height: var(--search_terms-button-height);
     position: absolute;
-    top: 12px;
-    right: 24px;
-    width: 36px;
+    top: var(--search_terms-button-top);
+    right: var(--search_terms-button-right);
+    width: var(--search_terms-button-width);
 }
 
 form#search_terms button:hover {
@@ -419,7 +474,7 @@ form#add_definition label {
     color: var(--label-color);
     font-size: var(--add_definition-label-font-size);
     font-weight: var(--add_definition-label-font-weight);
-    margin-bottom: 3px;
+    margin-bottom: var(--add_definition-label-margin-bottom);
     width: 100%;
 }
 
@@ -435,9 +490,9 @@ form#add_definition textarea {
     font-family: var(--font-family);
     font-size: var(--add_definition-ta-font-size);
     font-weight: var(--add_definition-ta-font-weight);
-    height: 106px;
-    margin-bottom: 9px;
-    padding: 8px 9px;
+    height: var(--add_definition-ta-height);
+    margin-bottom: var(--add_definition-ta-margin-bottom);
+    padding: var(--add_definition-ta-padding);
     transition: border var(--input-transition-time) var(--input-transition-type);
     width: 100%;
 }
@@ -453,7 +508,7 @@ form#add_definition button {
     border-radius: var(--input-border-radius);
     color: var(--button-text-color);
     margin: 0;
-    padding: 3px 15px;
+    padding: var(--add_definition-button-padding);
     transition: all var(--input-transition-time) var(--input-transition-type);
 }
 
