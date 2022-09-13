@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="/">Acme Company</a></h1>
+        <h1><a href="/"><img src="/assets/images/logo.svg" alt="Acme Company Logo">Acme Company</a></h1>
     </header>
     <form id="search_terms" method="POST" action="/">
         <input type="text" id="term" name="term" aria-label="Search" placeholder="Look up a term"/>
@@ -30,7 +30,7 @@
             <form id="add_definition" method='POST' action='/'>
                 <label for='definition'>Definition</label>
                 <input type='hidden' name='term' value='<?= $term ?>'>
-                <textarea id='definition' name='definition'></textarea>
+                <textarea id='definition' name='definition' placeholder="Enter a new definition"></textarea>
                 <button type='submit'>Submit</button>
             </form>
         <?php else : ?>
