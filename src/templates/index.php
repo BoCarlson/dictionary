@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Acme Company - Dictionary!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
@@ -37,14 +38,20 @@
             <h3>Please search for a term</h3>
         <?php endif; ?>
         <hr/>
-        <?= $Display->listWithHeader(
-            "Recent Searches",
-            $Definitions->listRecent()
-        ) ?>
-        <?= $Display->listWithHeader(
-            "Terms Needing Definitions",
-            $Terms->listUndefined()
-        ) ?>
+        <section id="stats">
+            <aside>
+                <?= $Display->listWithHeader(
+                    "Recent Searches",
+                    $Definitions->listRecent()
+                ) ?>
+            </aside>
+            <aside>
+                <?= $Display->listWithHeader(
+                    "Terms Needing Definitions",
+                    $Terms->listUndefined()
+                ) ?>
+            </aside>
+        </section>
     </main>
     <footer><a href="/">2021 Acme</a> | <a href="/terms-and-conditions">Terms and Conditions</a></footer>
 </body>
