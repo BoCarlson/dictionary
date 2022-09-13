@@ -58,7 +58,7 @@
      * Elements
      */
 
-    --add_definition-button-padding:      3px 15px;
+    --add_definition-button-padding:      6px 15px;
     --add_definition-label-margin-bottom: 3px;
     --add_definition-ta-height:           106px;
     --add_definition-ta-margin-bottom:    9px;
@@ -111,15 +111,17 @@
      * Fonts
      */
 
+    --add_definition-button-font-size:           14px;
+    --add_definition-button-font-weight:         400px;
     --add_definition-label-font-size:            12px;
-    --add_definition-label-font-weight:          14px;
+    --add_definition-label-font-weight:          400;
     --add_definition-ta-font-size:               16px;
-    --add_definition-ta-font-weight:             600;
+    --add_definition-ta-font-weight:             400;
     --add_definition-ta-placeholder-font-size:   16px;
     --add_definition-ta-placeholder-font-weight: 400;
 
     --body-font-size:                            16px;
-    --body-font-weight:                          400px;
+    --body-font-weight:                          400;
     --body-line-height:                          20px;
 
     --footer-font-size:                          12px;
@@ -414,6 +416,8 @@ form#search_terms input[type='text'] {
     border: var(--input-border-thickness) solid var(--search-border-color);
     border-radius: var(--container-border-radius);
     color: var(--input-text-color);
+    font-size: var(--search-terms-input-font-size);
+    font-weight: var(--search-terms-input-font-weight);
     line-height: var(--search_terms-input-line-height);
     padding: 0 var(--search_terms-input-padding-sides);
     transition: border var(--input-transition-time) var(--input-transition-type);
@@ -507,6 +511,8 @@ form#add_definition button {
     border: var(--input-border-thickness) solid var(--interaction-color);
     border-radius: var(--input-border-radius);
     color: var(--button-text-color);
+    font-size: var(--add_definition-button-font-size);
+    font-weight: var(--add_definition-button-font-weight);
     margin: 0;
     padding: var(--add_definition-button-padding);
     transition: all var(--input-transition-time) var(--input-transition-type);
